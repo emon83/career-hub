@@ -1,0 +1,37 @@
+[
+    {
+      "_id": "6433238cace8d1b5c8780dbb",
+      "name": "Assignment 1",
+      "assignmentMarks": 60
+    },
+    {
+      "_id": "6433238cb31ac2e34d88d18f",
+      "name": "Assignment 2",
+      "assignmentMarks": 60
+    },
+    {
+      "_id": "6433238c597ce8c75fc7153e",
+      "name": "Assignment 3",
+      "assignmentMarks": 57
+    },
+    {
+      "_id": "6433238cfc1e3535753f3f8f",
+      "name": "Assignment 4",
+      "assignmentMarks": 54
+    },
+    {
+      "_id": "6433238cbc5a1e44dc2efd94",
+      "name": "Assignment 5",
+      "assignmentMarks": 60
+    },
+    {
+      "_id": "6433238cdfb3afed6bf7aa1d",
+      "name": "Assignment 6",
+      "assignmentMarks": 59
+    },
+    {
+      "_id": "6433238c9e8ba4b15f4b6745",
+      "name": "Assignment 7",
+      "assignmentMarks": 60
+    }
+  ]
