@@ -8,18 +8,18 @@ const SingleFeaturedJob = ({ featuredJob }) => {
 
   const {_id, img, title, company, job_categoris, address, salary } = featuredJob;
 
-  const handleBtn = id =>{
+  /* const handleBtn = id =>{
     //console.log(id);
     localStorage.setItem('id', JSON.stringify(id))
-  }
+  } */
   return (
     <div className="text-start featured__card">
       <img src={img} alt="" />
       <h4 className="text-2xl font-bold text-gray-700 mt-8">{title}</h4>
       <h6 className="text-xl text-gray-500 mt-2">{company}</h6>
       <div className="flex gap-4 mt-4">
-        {job_categoris.map((categories) => (
-          <div className="job__categories text-purple-500 font-bold text-lg">
+        {job_categoris.map((categories, index) => (
+          <div key={index} className="job__categories text-purple-500 font-bold text-lg">
             <p className="">{categories}</p>
           </div>
         ))}
@@ -45,3 +45,5 @@ const SingleFeaturedJob = ({ featuredJob }) => {
 };
 
 export default SingleFeaturedJob;
+
+

@@ -1,0 +1,11 @@
+.footer{
+    height: 480px;
+    background: black;
+}
+
+.footer__container{
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    column-gap: 130px;
+    width: 80%;
+}

@@ -4,6 +4,7 @@ import heroImg from '../../assets/All Images/hero.png'
 import AppliedJobs from '../AppliedJobs/AppliedJobs'
 import JobCategory from '../Section/JobCategory'
 import FeaturedJobs from '../FeaturedJobs/FeaturedJobs'
+import Footer from '../Footer/Footer'
 
 const Home = () => {
   const featuredJobs = useLoaderData();
@@ -46,6 +47,7 @@ const Home = () => {
       jobCategory={jobCategory}
      ></JobCategory>
      <FeaturedJobs featuredJobs={featuredJobs}></FeaturedJobs>
+     <Footer/>
     </section>
   )
 }
