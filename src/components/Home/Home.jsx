@@ -6,6 +6,8 @@ import JobCategory from '../Section/JobCategory'
 import FeaturedJobs from '../FeaturedJobs/FeaturedJobs'
 
 const Home = () => {
+  const featuredJobs = useLoaderData();
+  //console.log(featuredJobs);
   const [jobCategory, setJobCategory] = useState();
 
   useEffect(()=>{
@@ -43,7 +45,7 @@ const Home = () => {
      <JobCategory
       jobCategory={jobCategory}
      ></JobCategory>
-     <FeaturedJobs></FeaturedJobs>
+     <FeaturedJobs featuredJobs={featuredJobs}></FeaturedJobs>
     </section>
   )
 }
