@@ -1,0 +1,9 @@
+
+@media only screen and (min-width: 992px){
+    .job__details{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 24px;
+    }
+        
+}

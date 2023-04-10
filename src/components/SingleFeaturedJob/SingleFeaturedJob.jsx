@@ -1,10 +1,17 @@
 import React from "react";
 import "./SingleFeaturedJob.css";
 import { MapPinIcon, CurrencyDollarIcon } from "@heroicons/react/24/solid";
+import { Link } from "react-router-dom";
 
 const SingleFeaturedJob = ({ featuredJob }) => {
-  console.log(featuredJob);
-  const { img, title, company, job_categoris, address, salary } = featuredJob;
+  //console.log(featuredJob);
+
+  const {_id, img, title, company, job_categoris, address, salary } = featuredJob;
+
+  const handleBtn = id =>{
+    //console.log(id);
+    localStorage.setItem('id', JSON.stringify(id))
+  }
   return (
     <div className="text-start featured__card">
       <img src={img} alt="" />
@@ -28,9 +35,11 @@ const SingleFeaturedJob = ({ featuredJob }) => {
             <CurrencyDollarIcon className="h-6 w-6 text-gray-600" />
             </span>Salary: {salary}</p>
       </div>
-      <button className="text-lg border-white btn btn-active bg-purple-500 hover:bg-purple-600 mt-6">
+      <Link to={`/jobDetails/${_id}`}>
+      <button onClick={()=>handleBtn(_id)} className="text-lg border-white btn btn-active bg-purple-500 hover:bg-purple-600 mt-6">
         View Details
       </button>
+      </Link>
     </div>
   );
 };
