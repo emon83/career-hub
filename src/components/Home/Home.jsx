@@ -1,12 +1,18 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link, useLoaderData } from 'react-router-dom'
 import heroImg from '../../assets/All Images/hero.png'
 import AppliedJobs from '../AppliedJobs/AppliedJobs'
 import JobCategory from '../Section/JobCategory'
 
 const Home = () => {
-    const jobCategory = useLoaderData();
-    //console.log(jobCategory);
+  const [jobCategory, setJobCategory] = useState();
+
+  useEffect(()=>{
+    fetch('jobCategory.json')
+    .then(response => response.json())
+    .then(data => setJobCategory(data))
+  }, [])
+
   return (
     <section>
       <div className='my-16 lg:my-24 lg:mx-28 md:block lg:flex justify-between items-center'>
@@ -33,7 +39,9 @@ const Home = () => {
       />
         </div>
       </div>
-     <JobCategory jobCategory={jobCategory}/>
+     <JobCategory
+      jobCategory={jobCategory}
+     ></JobCategory>
     </section>
   )
 }
