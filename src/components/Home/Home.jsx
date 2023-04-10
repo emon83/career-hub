@@ -3,6 +3,7 @@ import { Link, useLoaderData } from 'react-router-dom'
 import heroImg from '../../assets/All Images/hero.png'
 import AppliedJobs from '../AppliedJobs/AppliedJobs'
 import JobCategory from '../Section/JobCategory'
+import FeaturedJobs from '../FeaturedJobs/FeaturedJobs'
 
 const Home = () => {
   const [jobCategory, setJobCategory] = useState();
@@ -42,6 +43,7 @@ const Home = () => {
      <JobCategory
       jobCategory={jobCategory}
      ></JobCategory>
+     <FeaturedJobs></FeaturedJobs>
     </section>
   )
 }
