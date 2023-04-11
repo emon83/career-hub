@@ -1,11 +1,15 @@
 .footer{
-    height: 480px;
+    height: 500px;
     background: black;
+}
+
+.line{
+    width: 73%;
+    margin: 50px auto;
 }
 
 .footer__container{
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
-    column-gap: 130px;
     width: 80%;
 }

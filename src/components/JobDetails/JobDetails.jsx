@@ -2,11 +2,18 @@ import React, { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 import { MapPinIcon, CurrencyDollarIcon, CalendarDaysIcon, PhoneIcon, EnvelopeIcon } from "@heroicons/react/24/solid";
 import "./JobDetails.css";
+import { addToDb } from "../../utilities/fakeDb";
 
 const JobDetails = () => {
   const { id } = useParams();
   const data = useLoaderData();
   const [data1, setData1] = useState(data);
+
+  const handleAddToCart = id => {
+    console.log(id);
+    addToDb(id);
+
+  }
 
   useEffect(() => {
     fetch("/featuredJobs.json")
@@ -15,7 +22,7 @@ const JobDetails = () => {
   }, []);
   //console.log(data1);
   const storeData = data1 && data1.filter((job) => job._id === id);
-  console.log(storeData);
+  //console.log(storeData);
   const {
     job_description,
     job_responsibility,
@@ -79,7 +86,7 @@ const JobDetails = () => {
           <span className="text-gray-500">{address}</span>
         </p>
         <div className=" mx-auto">
-        <button className=" border-white btn btn-active bg-purple-500 hover:bg-purple-600 mt-10 w-full">
+        <button onClick={()=>handleAddToCart(id)} className=" border-white btn btn-active bg-purple-500 hover:bg-purple-600 mt-10 w-full">
           Apply Now
         </button>
         </div>

@@ -161,9 +161,11 @@ const Header = () => {
                       </Link>
                     </li>
                     <div>
+                      <Link to="/">
                       <button className="border-white btn btn-active bg-purple-500 hover:bg-purple-600 btn-md">
                         Start Applying
                       </button>
+                      </Link>
                     </div>
                   </ul>
                 </nav>

@@ -47,7 +47,7 @@ const Home = () => {
       jobCategory={jobCategory}
      ></JobCategory>
      <FeaturedJobs featuredJobs={featuredJobs}></FeaturedJobs>
-     <Footer/>
+     {/* <Footer/> */}
     </section>
   )
 }

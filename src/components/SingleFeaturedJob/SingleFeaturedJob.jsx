@@ -36,7 +36,7 @@ const SingleFeaturedJob = ({ featuredJob }) => {
             </span>Salary: {salary}</p>
       </div>
       <Link to={`/jobDetails/${_id}`}>
-      <button onClick={()=>handleBtn(_id)} className="text-lg border-white btn btn-active bg-purple-500 hover:bg-purple-600 mt-6">
+      <button  className="text-lg border-white btn btn-active bg-purple-500 hover:bg-purple-600 mt-6">
         View Details
       </button>
       </Link>
@@ -45,5 +45,3 @@ const SingleFeaturedJob = ({ featuredJob }) => {
 };
 
 export default SingleFeaturedJob;
-
-
