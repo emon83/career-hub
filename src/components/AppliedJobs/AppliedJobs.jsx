@@ -9,8 +9,6 @@ const AppliedJobs = () => {
 
   let cart = [];
   const savedData = getStoredCart();
-  //console.log(savedData);
-
   
   for (const id in savedData) {
       const foundJob = jobData && jobData.find((job) => job._id == id);
@@ -18,22 +16,23 @@ const AppliedJobs = () => {
           cart.push(foundJob);
         }
     }
-    //console.log(cart);
 
     const handleRemoteJob = () =>{
       const foundRemoteJob = cart.filter(remoteJob=> remoteJob.job_categoris[0] === 'Remote');
       setIsFilter(foundRemoteJob)
-      //return remoteJob;
-      
     }
+
     const handleOnsiteJob = () =>{
         const foundOnsiteJob = cart.filter(onsiteJob=> onsiteJob.job_categoris[0] === 'Onsite');
         setIsFilter(foundOnsiteJob);
     }
 
   return (
-    <div className="lg:mx-44 mx-16 my-32">
-      <div className="dropdown flex justify-end my-16">
+    <div className="lg:mx-44 mx-16 my-20">
+        <h2 className="text-center text-2xl font-bold">
+        Applied Jobs
+        </h2>
+      <div className="dropdown flex justify-end mb-16">
         <label tabIndex={0} className="btn border-white btn-active bg-purple-500 hover:bg-purple-600">
         Filter By
         </label>
@@ -41,10 +40,10 @@ const AppliedJobs = () => {
           tabIndex={0}
           className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52"
         >
-          <li onClick={()=>handleRemoteJob()}>
+          <li onClick={()=>handleRemoteJob(!isFilter)}>
             <a>Remote Job</a>
           </li>
-          <li onClick={()=>handleOnsiteJob()}>
+          <li onClick={()=>handleOnsiteJob(!isFilter)}>
             <a>Onsite Job</a>
           </li>
         </ul>
